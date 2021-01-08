@@ -1,0 +1,37 @@
+﻿<Window x:Class="DNwpf2.WindowAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DNwpf2"
+        mc:Ignorable="d"
+        Title="WindowAdmin" MinHeight="450" MinWidth="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        
+        <Grid x:Name="header" Panel.ZIndex="-2">
+            <Image Margin="5" Source="Resources/beauty_logo.png" HorizontalAlignment="Left"></Image>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                <Button Content="Главная" Margin="0,0,5,0" />
+                <Button Content="Клиенты" Margin="0,0,5,0" ></Button>
+                <Button Content="Сотрудники" Margin="0,0,5,0" ></Button>
+                <Button Content="Товары" Margin="0,0,5,0" ></Button>
+                <Button Content="Услуги" Margin="0,0,5,0" ></Button>
+                <Button Content="Компания" Margin="0,0,5,0" ></Button>
+                <Button Content="Выйти" Click="Button_Click_Exit"></Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2" x:Name="footer" Panel.ZIndex="-2">
+            <Image Source="Resources/beauty_logo.ico"></Image>
+        </Grid>
+        <Frame Grid.Row="1" Name="MainAdmin"></Frame>
+    </Grid>
+</Window>
